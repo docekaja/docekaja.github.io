@@ -5,7 +5,7 @@ type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header className="sticky top-0 flex flex-row justify-between max-w-7xl mx-auto z-20 xl:items-center px-5 py-4">
+    <header className="sticky top-0 flex flex-row justify-between max-w-7xl mx-auto z-20 xl:items-center px-5 py-4 bg-[rgb(29,29,29)]">
       <motion.div
         initial={{ x: -500, opacity: 0, scale: 0.3 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
