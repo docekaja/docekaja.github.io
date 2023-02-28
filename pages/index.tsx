@@ -7,7 +7,6 @@ export default function Home() {
       <Head>
         <title>Personal portfolio - Jan Dočekal</title>
       </Head>
-      {/* {HEADER} */}
       <Header />
 
       {/* {HERO} */}
