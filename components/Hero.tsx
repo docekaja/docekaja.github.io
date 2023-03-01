@@ -1,26 +1,12 @@
-import { useState } from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
-import HeroSquare from './HeroSquare';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type Props = {};
 
 export default function Hero({}: Props) {
-  const [descriptionVisible, setDescriptionVisible] = useState(false);
-
-  const [helloW, helper1] = useTypewriter({
-    words: ['Hello World,'],
-    loop: 1,
-    typeSpeed: 80,
-    onLoopDone: () => setTimeout(() => setDescriptionVisible(true), 200),
-  });
-
-  const [aboutMe, helper2] = useTypewriter({
-    words: [
-      'my name is Jan Dočekal.',
-      'welcome to my personal page.',
-      'scroll down to see more of my work.',
-    ],
+  const [aboutMe, helper] = useTypewriter({
+    words: ['Hello stranger', 'My name is Jan Dočekal', 'Have fun exploring my website'],
     loop: 1,
     delaySpeed: 2000,
     typeSpeed: 80,
@@ -28,28 +14,35 @@ export default function Hero({}: Props) {
   });
 
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
-      <HeroSquare />
-      <div className="relative h-36 w-36 mx-auto drop-shadow-sm object-cover">
-        <Image
-          src="/myEmoji.png"
-          alt="emoji image"
-          fill
-          sizes="(max-width: 768px) 100vw,
-        (max-width: 1200px) 50vw,
-        33vw"
-        />
-      </div>
-      <h1 className="flex flex-row">
-        <div className="flex flex-col gap-3">
-          <span className="text-5xl ">{helloW}</span>
-          <div>
-            {descriptionVisible && <span>{aboutMe}</span>}
-            {!descriptionVisible && <Cursor cursorColor="#ca8a04" />}
-            {descriptionVisible && <Cursor cursorColor="#ca8a04" />}
-          </div>
+    <div className="h-screen flex flex-col space-y-6 items-center justify-center text-center overflow-hidden">
+      <div>
+        <div className="relative bottom-4 h-32 w-32 mx-auto drop-shadow-sm object-cover">
+          <Image src="/myEmoji.png" alt="emoji image" fill sizes="20vw,20vw,2Ovw" />
         </div>
-      </h1>
+        <h2 className="relative bottom-2 text-gray-500">Junior JavaScript Developer</h2>
+      </div>
+      <div className="space-y-8 z-20">
+        <h1 className="flex flex-row text-2xl md:text-3xl lg:text-4xl justify-center">
+          <span className="">{aboutMe}</span>
+          <Cursor cursorColor="#ca8a04" />
+        </h1>
+        <div className="space-x-4 lg:space-x-8">
+          <Link href={''}>
+            <button className="heroButton" onClick={() => console.log('Hi')}>
+              About
+            </button>
+          </Link>
+          <Link href={''}>
+            <button className="heroButton">Projects</button>
+          </Link>
+          <Link href={''}>
+            <button className="heroButton">CV</button>
+          </Link>
+          <Link href={''}>
+            <button className="heroButton">Contact</button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
