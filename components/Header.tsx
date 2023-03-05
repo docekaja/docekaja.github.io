@@ -6,7 +6,7 @@ type Props = {};
 export default function Header({}: Props) {
   return (
     <header className="sticky top-0 z-20 py-2 bg-[rgb(29,29,29)] shadow-md">
-      <div className="flex flex-row justify-between container mx-auto">
+      <div className="flex flex-row justify-between container mx-auto px-3">
         <motion.div
           initial={{ x: -500, opacity: 0, scale: 0.3 }}
           animate={{ x: 0, opacity: 1, scale: 0.9 }}
