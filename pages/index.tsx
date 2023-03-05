@@ -1,3 +1,4 @@
+import About from '@/components/About';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Head from 'next/head';
@@ -10,20 +11,23 @@ export default function Home() {
       </Head>
       <Header />
 
-      {/* {HERO} */}
-      <section id="hero" className="container mx-auto snap-center">
-        <Hero />
-      </section>
+      <div className="container mx-auto">
+        <section id="hero" className="snap-start">
+          <Hero />
+        </section>
 
-      {/* {ABOUT} */}
+        <section id="about" className="snap-center">
+          <About />
+        </section>
 
-      {/* {EXPERIENCE} */}
+        {/* {EXPERIENCE} */}
 
-      {/* {SKILLS} */}
+        {/* {SKILLS} */}
 
-      {/* {PROJECTS} */}
+        {/* {PROJECTS} */}
 
-      {/* {CONTACT ME} */}
+        {/* {CONTACT ME} */}
+      </div>
     </div>
   );
 }
