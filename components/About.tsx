@@ -24,15 +24,19 @@ export default function About({}: Props) {
         />
         <div className="space-y-8 px-0 md:px-20">
           <h4 className="text-2xl md:text-3xl">Here is my story</h4>
-          <p className="text-sm md:text-base">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam sed tellus id
-            magna elementum tincidunt. Phasellus faucibus molestie nisl. Nullam faucibus
-            mi quis velit. Suspendisse nisl. Duis risus. Etiam dictum tincidunt diam. In
-            dapibus augue non sapien. Maecenas aliquet accumsan leo. Mauris suscipit,
-            ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit
-            mauris vel metus. Quisque tincidunt scelerisque libero. Vivamus porttitor
-            turpis ac leo.
-          </p>
+          <div>
+            <p className="text-sm md:text-base">
+              Hey there, I'm Jan Dočekal! Once upon a time, I was a lawyer, but now I'm a
+              junior Javascript developer with a passion for building awesome things.
+              After spending some time in the legal world, I realized that I wanted to
+              pursue my love for technology, so I took a leap of faith and enrolled in
+              Green Fox Academy's coding bootcamp. From September 2022 to February 2023, I
+              immersed myself in the world of Javascript and TypeScript, and I've been
+              hooked ever since. I'm always looking for new opportunities to grow and
+              learn. If you're interested in working together, don't hesitate to reach out
+              to me.
+            </p>
+          </div>
         </div>
       </div>
     </motion.div>
